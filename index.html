@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia de los Maikistas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rancio-red': '#5c0002',
+                        'rancio-gold': '#ffd700',
+                        'rancio-dark': '#1a0000',
+                    },
+                    fontFamily: {
+                        'holy': ['Cinzel', 'serif'],
+                        'cursed': ['Comic Neue', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1a0000;
+            background-image: radial-gradient(#5c0002 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        .box-glow {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(92, 0, 2, 0.8);
+        }
+        /* Estilo rancio para scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a0000;
+            border-left: 2px solid #ffd700;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5c0002;
+            border: 1px solid #ffd700;
+        }
+        
+        /* Transición suave para expandir el blog */
+        .expand-transition {
+            transition: all 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        /* Mejoras responsive adicionales */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        /* Reducir animaciones en móviles para ahorrar batería */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mejoras para pantallas muy pequeñas */
+        @media (max-width: 360px) {
+            .font-holy {
+                letter-spacing: -0.02em;
+            }
+        }
+
+        /* Touch targets más grandes en móviles */
+        @media (pointer: coarse) {
+            a, button {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-200 font-cursed min-h-screen flex flex-col">
+
+    <!-- Marquesina Rancia -->
+    <div class="bg-rancio-gold text-rancio-red font-holy font-bold py-1 text-sm md:text-lg border-b-4 border-rancio-red shadow-lg overflow-hidden whitespace-nowrap">
+        <marquee scrollamount="8">🙏 ¡ÚNETE A LA IGLESIA MAIKISTA! SALVACIÓN GARANTIZADA A CAMBIO DE TU DIGNIDAD 🙏 EL AMOR ES UN MITO 🙏</marquee>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="bg-rancio-red border-b-4 border-rancio-gold sticky top-0 z-50 p-4 box-glow">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <h1 class="text-3xl font-holy text-rancio-gold text-glow flex items-center gap-2">
+                <span class="text-4xl">🕊️</span> Maikistas <span class="text-4xl">🕊️</span>
+            </h1>
+            <ul class="flex flex-wrap justify-center gap-6 text-rancio-gold font-holy text-sm md:text-base">
+                <li><a href="#inicio" class="hover:text-white transition-colors">El Profeta</a></li>
+                <li><a href="#ideologia" class="hover:text-white transition-colors">Sagrada Ideología</a></li>
+                <li><a href="#mandamientos" class="hover:text-white transition-colors">Los 11 Mandamientos</a></li>
+                <li><a href="#blog" class="hover:text-white transition-colors">Epístolas (Blog)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero / El Profeta -->
+    <header id="inicio" class="py-10 md:py-16 px-4 md:px-8 text-center bg-gradient-to-b from-rancio-dark to-transparent">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-7xl font-holy text-rancio-gold text-glow mb-4 md:mb-6">Alabado sea El Maik</h2>
+            <p class="text-lg md:text-2xl mb-6 md:mb-8 italic text-gray-400">"Y entonces el maik dijo: Ni tu pvta dignidad pudiste salvar."</p>
+            
+            <div class="relative inline-block mt-4 mb-6 md:mb-8">
+                <!-- Marco divino para la imagen -->
+                <div class="absolute -inset-2 md:-inset-4 border-4 border-dashed border-rancio-gold rounded-full animate-spin-slow" style="animation-duration: 20s;"></div>
+                <img 
+                    src="maik.jpeg" 
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590422750035-c3359d997204?q=80&w=800&auto=format&fit=crop';" 
+                    alt="El Sagrado Maik" 
+                    class="relative z-10 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-cover rounded-full border-4 md:border-8 border-rancio-gold box-glow shadow-[0_0_50px_rgba(255,215,0,0.5)]"
+                >
+            </div>
+        </div>
+    </header>
+
+    <!-- Ideología -->
+    <section id="ideologia" class="py-10 md:py-16 px-4 bg-rancio-red border-y-8 border-double border-rancio-gold">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-holy text-rancio-gold text-glow mb-6 md:mb-8">✝️ Nuestra Sagrada Ideología ✝️</h2>
+            <div class="bg-rancio-dark p-6 md:p-8 border-2 border-rancio-gold rounded-lg shadow-2xl">
+                <p class="text-base md:text-xl leading-relaxed mb-4 md:mb-6 font-cursed text-gray-300">
+                    El Maikismo no es solo una religión, es un estilo de vida basado en el sagrado arte del autosabotaje. Creemos fielmente en la austeridad absoluta, el rechazo a las convenciones sociales básicas (como entender un chiste) y en mantener un aura constante de incomodidad radiante.
+                </p>
+                <p class="text-base md:text-xl leading-relaxed font-cursed text-gray-300">
+                    Nuestro Profeta, El Maik, descendió de los cielos para enseñarnos que la verdadera iluminación.
+                </p>
+                <div class="mt-6 md:mt-8 text-rancio-gold font-holy text-xl md:text-2xl animate-pulse">
+                    ¡Amén y que la sal te acompañe!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mandamientos -->
+    <section id="mandamientos" class="py-10 md:py-16 px-4 max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-holy text-center text-rancio-gold text-glow mb-8 md:mb-12">📜 Las 11 Tablas de la Ley 📜</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Tabla izquierda -->
+            <div class="bg-gradient-to-br from-gray-800 to-black p-4 md:p-6 border-4 border-gray-600 rounded-t-full rounded-b-xl shadow-2xl relative">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-4 bg-rancio-gold text-rancio-dark font-holy font-bold px-4 py-1 rounded-full text-sm">TABLA I</div>
+                <ul class="space-y-4 md:space-y-6 mt-6 md:mt-8 font-holy text-base md:text-lg text-gray-300">
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">I.</span>
+                        <p class="pt-1">Hay que migajear.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">II.</span>
+                        <p class="pt-1">Ser una facilota.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">III.</span>
+                        <p class="pt-1">No entender los chistes y tratar de explicarlos.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">IV.</span>
+                        <p class="pt-1">Chivearse cuando hay una morra a menos de 3 metros.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">V.</span>
+                        <p class="pt-1">Poner rolas aburridas.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">VI.</span>
+                        <p class="pt-1">Malacopear.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tabla derecha -->
+            <div class="bg-gradient-to-br from-gray-800 to-black p-4 md:p-6 border-4 border-gray-600 rounded-t-full rounded-b-xl shadow-2xl relative">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-4 bg-rancio-gold text-rancio-dark font-holy font-bold px-4 py-1 rounded-full text-sm">TABLA II</div>
+                <ul class="space-y-4 md:space-y-6 mt-6 md:mt-8 font-holy text-base md:text-lg text-gray-300">
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">VII.</span>
+                        <p class="pt-1">Ser un pvto salado.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">VIII.</span>
+                        <p class="pt-1">No saber una mierda de amor.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">IX.</span>
+                        <p class="pt-1">Ser un mugroso y chirgo.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">X.</span>
+                        <p class="pt-1 text-red-400 font-bold">No pagar ni un centavo a juegos indie.</p>
+                    </li>
+                    <li class="flex gap-3 md:gap-4 items-start hover:text-rancio-gold transition-colors">
+                        <span class="text-2xl md:text-3xl text-rancio-red font-bold drop-shadow-[0_0_5px_#ffd700]">XI.</span>
+                        <p class="pt-1 italic underline">Proyectarse.</p>
+                    </li>
+                </ul>
+                <div class="mt-6 md:mt-8 text-center opacity-50">
+                    <img src="https://api.iconify.design/game-icons:praying-hands.svg?color=%23ffd700" alt="rezar" class="w-12 h-12 md:w-16 md:h-16 mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog de la Congregación (Única Entrada: La Escala) -->
+    <section id="blog" class="py-12 md:py-20 px-4 bg-black border-t-4 border-rancio-red relative">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/church.png')]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-5xl font-holy text-rancio-gold text-glow mb-4 text-center">🕯️ La Escala de la Miseria 🕯️</h2>
+            
+            <!-- Post Único y Expandible -->
+            <article class="bg-rancio-dark border-2 border-rancio-gold p-6 md:p-12 rounded-lg shadow-[0_0_30px_rgba(255,215,0,0.15)] box-glow">
+                <div class="text-base md:text-xl text-gray-300 font-cursed leading-relaxed space-y-6">
+                    <p class="mb-6 md:mb-8 text-center font-bold text-rancio-gold text-sm md:text-base">
+                        Presentamos la Escala Oficial de Dificultad del Maikismo, el único medidor capaz de cuantificar qué tan profundamente hundido está usted en el lodazal de lo absurdo.
+                    </p>
+
+                    <!-- Tabla Rancia -->
+                    <div class="overflow-x-auto mb-6 md:mb-8 border-4 border-rancio-gold rounded-lg shadow-lg">
+                        <table class="w-full border-collapse text-xs md:text-base">
+                            <thead>
+                                <tr class="bg-rancio-red text-rancio-gold font-holy text-left">
+                                    <th class="p-2 md:p-4 border-b-2 border-rancio-gold">Nivel</th>
+                                    <th class="p-2 md:p-4 border-b-2 border-rancio-gold">Reto o Dificultad</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-cursed bg-rancio-dark/80">
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">1</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Burlarse del pelolonchas y el cornudo</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">2</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Hacer enjar al cornudo</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">3</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Anahi</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">4</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Carrera de sistemas en el tec</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">5</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Una frace legendaria del pastor</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">6</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Que el cornudo deje de ser un nadaQuehaceriento</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">7</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Aguantar al botas de amigo</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">8</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Cuphead</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">9</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Encontrar a alguien que le importe el pelolonchas</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-red-500 text-base md:text-lg">10</td><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-red-400 font-bold">Que el cornudo olvide a Diana</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Contenido oculto inicial -->
+                    <div id="contenido-oculto" class="expand-transition hidden space-y-4 md:space-y-6 mt-6 md:mt-8">
+                        <h3 class="text-2xl md:text-3xl text-rancio-gold font-holy mb-4 text-center">¿Cómo sobrevivir a tu propia miseria?</h3>
+                        <p class="text-center mb-4 md:mb-6 text-gray-400 italic text-sm md:text-base">Si ya te ubicaste en la escala, no desesperes (o sí, da igual). Aquí te dejamos la guía de supervivencia:</p>
+                        
+                        <div class="grid gap-3 md:gap-4">
+                            <div class="bg-black/50 p-3 md:p-4 rounded border-l-4 border-rancio-red">
+                                <strong class="text-rancio-gold font-holy block mb-1 text-sm md:text-base">Niveles 1-3 ("Principiante en el Caos"):</strong>
+                                <p class="text-sm md:text-base">Si apenas te estás burlando o lidiando con situaciones básicas, tu única estrategia es mantener la distancia emocional y no dejar que el entorno te consuma.</p>
+                            </div>
+                            <div class="bg-black/50 p-3 md:p-4 rounded border-l-4 border-rancio-red">
+                                <strong class="text-rancio-gold font-holy block mb-1 text-sm md:text-base">Niveles 4-6 ("Resiliencia Académica y Personal"):</strong>
+                                <p class="text-sm md:text-base">Cuando enfrentas la carga de sistemas o lidias con los "nadaQuehacerientos", la clave es la tolerancia a la frustración y aprender a ignorar lo que no puedes controlar.</p>
+                            </div>
+                            <div class="bg-black/50 p-3 md:p-4 rounded border-l-4 border-rancio-red">
+                                <strong class="text-rancio-gold font-holy block mb-1 text-sm md:text-base">Niveles 7-9 ("Supervivencia de Élite"):</strong>
+                                <p class="text-sm md:text-base">Aquí es donde aguantas amigos imposibles o te pierdes en los videojuegos; tu mejor opción es buscar pequeñas distracciones sanas antes de perder la cordura por completo.</p>
+                            </div>
+                            <div class="bg-rancio-red/20 p-4 md:p-6 rounded border-l-8 border-rancio-red text-center box-glow">
+                                <strong class="text-red-500 font-holy block mb-2 text-lg md:text-xl">☠️ Nivel 10 ("Tragedia Final"): ☠️</strong>
+                                <p class="text-gray-300 text-sm md:text-base">Ante retos imposibles como que el cornudo supere su pasado, lo único que queda es el desapego absoluto. Si usted se encuentra aquí, es momento de retirarse, buscar terapia o aceptar que el destino del "cornudo" es nuestra mayor obra maestra.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 md:mt-12 text-center">
+                    <button id="btn-expandir" onclick="togglePost()" class="inline-block bg-rancio-red hover:bg-red-900 text-rancio-gold font-holy font-bold py-2 md:py-3 px-6 md:px-8 rounded border-2 border-rancio-gold transition-all duration-300 shadow-[0_0_15px_rgba(255,0,0,0.4)] text-sm md:text-base">
+                        📜 Leer la guía de supervivencia >>
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rancio-red text-center py-6 md:py-8 border-t-8 border-rancio-gold mt-auto">
+        <div class="max-w-4xl mx-auto px-4">
+            <h4 class="font-holy text-xl md:text-2xl text-rancio-gold mb-4 text-glow">Iglesia de los Maikistas</h4>
+            <p class="font-cursed text-gray-400 text-sm mb-4">
+                "No sabemos una mierda de amor."
+            </p>
+            <p class="font-holy text-xs text-gray-500 mt-6 md:mt-8">
+                © 2026 Santa Sede Maikista. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón rancio flotante de ofrendas -->
+    <div class="fixed bottom-3 right-3 md:bottom-4 md:right-4 z-50">
+        <button class="bg-rancio-gold hover:bg-yellow-400 text-rancio-dark font-holy font-bold py-2 md:py-3 px-4 md:px-6 rounded-full shadow-[0_0_15px_#ffd700] transform hover:scale-110 transition-all border-2 border-rancio-red text-sm md:text-base" onclick="document.getElementById('modal-ofrenda').classList.remove('hidden')">
+            💰 Dar Ofrenda (Migajas)
+        </button>
+    </div>
+
+    <!-- Modal de Ofrendas -->
+    <div id="modal-ofrenda" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+        <div class="bg-rancio-dark border-4 border-rancio-gold p-6 md:p-8 rounded-lg max-w-sm w-full text-center relative box-glow">
+            <button onclick="document.getElementById('modal-ofrenda').classList.add('hidden')" class="absolute top-2 right-4 text-rancio-gold text-2xl font-bold hover:text-white">&times;</button>
+            <h3 class="text-xl md:text-2xl font-holy text-rancio-gold mb-4">¡Pecador!</h3>
+            <p class="text-gray-300 font-cursed mb-6 text-sm md:text-base">Un verdadero Maikista no dona dinero. Guarda tus centavos y sigue siendo un mugroso y chirgo.</p>
+            <button onclick="document.getElementById('modal-ofrenda').classList.add('hidden')" class="bg-rancio-red text-white font-holy px-6 py-2 rounded hover:bg-red-800 transition-colors border border-rancio-gold">Amén</button>
+        </div>
+    </div>
+
+    <!-- Lógica de la página -->
+    <script>
+        function togglePost() {
+            const contenido = document.getElementById('contenido-oculto');
+            const boton = document.getElementById('btn-expandir');
+            
+            if (contenido.classList.contains('hidden')) {
+                // Mostrar contenido
+                contenido.classList.remove('hidden');
+                boton.innerHTML = '<< Ocultar mi miseria';
+                boton.classList.replace('bg-rancio-red', 'bg-black');
+            } else {
+                // Ocultar contenido
+                contenido.classList.add('hidden');
+                boton.innerHTML = '📜 Leer la guía de supervivencia >>';
+                boton.classList.replace('bg-black', 'bg-rancio-red');
+            }
+        }
+    </script>
+</body>
+</html>
