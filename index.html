@@ -47,6 +47,21 @@
             background: #5c0002;
             border: 1px solid #ffd700;
         }
+
+        .bg-rancio-dark-texture{
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url(https://dl.glitter-graphics.com/pub/601/601825su5uvpwan1.gif);
+        }
+        .bg-rancio-red-texture{
+            background-image: url(https://dl.glitter-graphics.com/pub/601/601825su5uvpwan1.gif);
+        }
+        .bg-header-rancio{
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.4)),
+                url(https://dl.glitter-graphics.com/pub/1516/1516349ru2msr5cc2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         
         /* Transición suave para expandir el blog */
         .expand-transition {
@@ -93,11 +108,15 @@
     </div>
 
     <!-- Navegación -->
-    <nav class="bg-rancio-red border-b-4 border-rancio-gold sticky top-0 z-50 p-4 box-glow">
+    <nav class="bg-rancio-red-texture border-b-4 border-rancio-gold sticky top-0 z-50 p-4 box-glow">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <h1 class="text-3xl font-holy text-rancio-gold text-glow flex items-center gap-2">
-                <span class="text-4xl">🕊️</span> Maikistas <span class="text-4xl">🕊️</span>
-            </h1>
+            <div class="flex items-center justify-around">
+                <img src="assets/gifs/pigeon.gif">
+                <h1 class="text-3xl font-holy text-rancio-gold text-glow flex items-center gap-2">
+                    Maikistas 
+                </h1>
+                <img src="assets/gifs/pigeon.gif">
+            </div>
             <ul class="flex flex-wrap justify-center gap-6 text-rancio-gold font-holy text-sm md:text-base">
                 <li><a href="#inicio" class="hover:text-white transition-colors">El Profeta</a></li>
                 <li><a href="#ideologia" class="hover:text-white transition-colors">Sagrada Ideología</a></li>
@@ -108,14 +127,14 @@
     </nav>
 
     <!-- Hero / El Profeta -->
-    <header id="inicio" class="py-10 md:py-16 px-4 md:px-8 text-center bg-gradient-to-b from-rancio-dark to-transparent">
+    <header id="inicio" class="bg-header-rancio py-10 md:py-16 px-4 md:px-8 text-center from-rancio-dark to-transparent">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-7xl font-holy text-rancio-gold text-glow mb-4 md:mb-6">Alabado sea El Maik</h2>
             <p class="text-lg md:text-2xl mb-6 md:mb-8 italic text-gray-400">"Y entonces el maik dijo: Ni tu pvta dignidad pudiste salvar."</p>
             
             <div class="relative inline-block mt-4 mb-6 md:mb-8">
                 <!-- Marco divino para la imagen -->
-                <div class="absolute -inset-2 md:-inset-4 border-4 border-dashed border-rancio-gold rounded-full animate-spin-slow" style="animation-duration: 20s;"></div>
+                <div class="absolute -inset-2 md:-inset-4" style="animation-duration: 20s;"></div>
                 <img 
                     src="maik.jpeg" 
                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590422750035-c3359d997204?q=80&w=800&auto=format&fit=crop';" 
@@ -127,10 +146,10 @@
     </header>
 
     <!-- Ideología -->
-    <section id="ideologia" class="py-10 md:py-16 px-4 bg-rancio-red border-y-8 border-double border-rancio-gold">
+    <section id="ideologia" class="bg-rancio-red-texture md:py-16 px-4 bg-rancio-red border-y-8 border-double border-rancio-gold">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-holy text-rancio-gold text-glow mb-6 md:mb-8">✝️ Nuestra Sagrada Ideología ✝️</h2>
-            <div class="bg-rancio-dark p-6 md:p-8 border-2 border-rancio-gold rounded-lg shadow-2xl">
+            <div class="bg-rancio-dark-texture p-6 md:p-8 border-2 border-rancio-gold rounded-lg shadow-2xl">
                 <p class="text-base md:text-xl leading-relaxed mb-4 md:mb-6 font-cursed text-gray-300">
                     El Maikismo no es solo una religión, es un estilo de vida basado en el sagrado arte del autosabotaje. Creemos fielmente en la austeridad absoluta, el rechazo a las convenciones sociales básicas (como entender un chiste) y en mantener un aura constante de incomodidad radiante.
                 </p>
@@ -216,10 +235,12 @@
     <section id="blog" class="py-12 md:py-20 px-4 bg-black border-t-4 border-rancio-red relative">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/church.png')]"></div>
         <div class="max-w-4xl mx-auto relative z-10">
-            <h2 class="text-3xl md:text-5xl font-holy text-rancio-gold text-glow mb-4 text-center">🕯️ La Escala de la Miseria 🕯️</h2>
+            <div class="flex items-center justify-around">
+                <img src="assets/gifs/candle.gif" ><h2 class="text-3xl md:text-5xl font-holy text-rancio-gold text-glow mb-4 text-center"> La Escala de la Miseria </h2><img src="assets/gifs/candle.gif" >
+            </div>
             
             <!-- Post Único y Expandible -->
-            <article class="bg-rancio-dark border-2 border-rancio-gold p-6 md:p-12 rounded-lg shadow-[0_0_30px_rgba(255,215,0,0.15)] box-glow">
+            <article class="bg-rancio-dark-texture border-2 border-rancio-gold p-6 md:p-12 rounded-lg shadow-[0_0_30px_rgba(255,215,0,0.15)] box-glow">
                 <div class="text-base md:text-xl text-gray-300 font-cursed leading-relaxed space-y-6">
                     <p class="mb-6 md:mb-8 text-center font-bold text-rancio-gold text-sm md:text-base">
                         Presentamos la Escala Oficial de Dificultad del Maikismo, el único medidor capaz de cuantificar qué tan profundamente hundido está usted en el lodazal de lo absurdo.
@@ -236,10 +257,10 @@
                             </thead>
                             <tbody class="font-cursed bg-rancio-dark/80">
                                 <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">1</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Burlarse del pelolonchas y el cornudo</td></tr>
-                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">2</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Hacer enjar al cornudo</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">2</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Hacer enojar al cornudo</td></tr>
                                 <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">3</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Anahi</td></tr>
                                 <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">4</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Carrera de sistemas en el tec</td></tr>
-                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">5</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Una frace legendaria del pastor</td></tr>
+                                <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">5</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Una frase legendaria del pastor</td></tr>
                                 <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">6</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Que el cornudo deje de ser un nadaQuehaceriento</td></tr>
                                 <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">7</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Aguantar al botas de amigo</td></tr>
                                 <tr class="hover:bg-rancio-red/20 transition-colors"><td class="p-2 md:p-3 border-b border-rancio-gold/50 text-center font-bold text-rancio-gold">8</td><td class="p-2 md:p-3 border-b border-rancio-gold/50">Cuphead</td></tr>
@@ -286,7 +307,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-rancio-red text-center py-6 md:py-8 border-t-8 border-rancio-gold mt-auto">
+    <footer class="bg-rancio-red-texture text-center py-6 md:py-8 border-t-8 border-rancio-gold mt-auto">
         <div class="max-w-4xl mx-auto px-4">
             <h4 class="font-holy text-xl md:text-2xl text-rancio-gold mb-4 text-glow">Iglesia de los Maikistas</h4>
             <p class="font-cursed text-gray-400 text-sm mb-4">
@@ -307,7 +328,7 @@
 
     <!-- Modal de Ofrendas -->
     <div id="modal-ofrenda" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
-        <div class="bg-rancio-dark border-4 border-rancio-gold p-6 md:p-8 rounded-lg max-w-sm w-full text-center relative box-glow">
+        <div class="bg-rancio-dark-texture bg-rancio-dark border-4 border-rancio-gold p-6 md:p-8 rounded-lg max-w-sm w-full text-center relative box-glow">
             <button onclick="document.getElementById('modal-ofrenda').classList.add('hidden')" class="absolute top-2 right-4 text-rancio-gold text-2xl font-bold hover:text-white">&times;</button>
             <h3 class="text-xl md:text-2xl font-holy text-rancio-gold mb-4">¡Pecador!</h3>
             <p class="text-gray-300 font-cursed mb-6 text-sm md:text-base">Un verdadero Maikista no dona dinero. Guarda tus centavos y sigue siendo un mugroso y chirgo.</p>
